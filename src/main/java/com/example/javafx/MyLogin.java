@@ -8,15 +8,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class MyLogin extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
-        Scene scene = new Scene(root , 400 , 400);
+        Parent root = FXMLLoader.load(getClass().getResource("MyLogin.fxml"));
+        Scene scene = new Scene(root , 300 , 200, Color.TEAL);
 
+        scene.getStylesheets().add(MyLogin.class.getResource("MyLogin.css").toExternalForm());
 
-
-        stage.setTitle("Shape Man FX");
+        stage.setTitle("My Login");
         stage.setScene(scene);
         stage.show();
     }
